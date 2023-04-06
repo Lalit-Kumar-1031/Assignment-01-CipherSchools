@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 const List<String> largeAds = [
   "assets/Images/feedback1.png",
   "assets/Images/feedback2.png",
@@ -70,7 +71,3 @@ const List<String> features = [
   "Explore Courses",
   "SignIn",
 ];
-
-
-
-

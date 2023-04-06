@@ -4,10 +4,8 @@ import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
-  ]);
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const MyApp());
 }
 
@@ -22,8 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         backgroundColor: Colors.white60,
       ),
-      home: LayoutScreen(),
+      home: const LayoutScreen(),
     );
   }
 }
-

@@ -32,20 +32,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size screen=MediaQuery.of(context).size;
+    Size screen = MediaQuery.of(context).size;
     return SafeArea(
         child: Scaffold(
-            appBar: HomeAppBar(),
+            appBar: const HomeAppBar(),
             backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
+
+//------------------------------ Weclome to the Future of learning code Section--------------------------------
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Welcome to ",
                         style: TextStyle(
@@ -64,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Future ",
                         style: TextStyle(
@@ -81,46 +84,53 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 36)),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
-                  Text(
+
+                  //------------------------------ Animated Text code Section--------------------------------
+
+                  const Text(
                     "Start Learning by best creators for",
                     style: TextStyle(color: Colors.black87, fontSize: 19),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       DefaultTextStyle(
-                        style: TextStyle(fontSize: 22, color: Colors.orange),
+                        style:
+                            const TextStyle(fontSize: 22, color: Colors.orange),
                         child: AnimatedTextKit(
                           repeatForever: true,
-                          pause: Duration(milliseconds: 700),
+                          pause: const Duration(milliseconds: 700),
                           animatedTexts: [
                             TyperAnimatedText("absolutely Free",
-                                speed: Duration(milliseconds: 200)),
+                                speed: const Duration(milliseconds: 200)),
                           ],
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
+
+//------------------------------ 50+ Mentor and Course Rating code Section--------------------------------
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
                         width: 80,
                         child: Stack(
                           fit: StackFit.loose,
-                          children: [
+                          children: const [
                             Positioned(
                               left: 40,
                               child: CircleAvatar(
@@ -159,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "50+",
                             style: TextStyle(
@@ -181,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             "4.8/5",
                             style: TextStyle(
                                 fontSize: 18,
@@ -196,16 +206,23 @@ class _HomeScreenState extends State<HomeScreen> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
+
+//------------------------------ Start Learning Button code Section--------------------------------
+
                   SizedBox(
                     height: 45,
                     width: MediaQuery.of(context).size.width * 0.54,
                     child: ElevatedButton(
                       onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
                       child: Row(
-                        children: [
+                        children: const [
                           Text(
                             "Start Learning Now",
                             style: TextStyle(color: Colors.white, fontSize: 15),
@@ -219,15 +236,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         ],
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10))),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
+
+                  //------------------------------ Slider 1 code Section--------------------------------
 
                   //This Section for Implement Slider
                   CarouselSlider.builder(
@@ -239,32 +254,35 @@ class _HomeScreenState extends State<HomeScreen> {
                       options: CarouselOptions(
                         height: 200,
                         autoPlay: true,
-                        autoPlayInterval: Duration(seconds: 4),
-                        autoPlayAnimationDuration: Duration(milliseconds: 1300),
+                        autoPlayInterval: const Duration(seconds: 4),
+                        autoPlayAnimationDuration:
+                            const Duration(milliseconds: 1300),
                         //viewportFraction: 1,
                         enlargeCenterPage: true,
                         enlargeStrategy: CenterPageEnlargeStrategy.zoom,
                       )),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
+
+//------------------------------ CipherSchools Record Data code Section--------------------------------
 
                   Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           InfoWidget(title: "15K+", subtitle: "Students"),
                           InfoWidget(
                               title: "10K+",
                               subtitle: "Certificates delivered"),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           InfoWidget(
                               title: "450K+", subtitle: "Streamed minutes"),
                           InfoWidget(
@@ -272,17 +290,20 @@ class _HomeScreenState extends State<HomeScreen> {
                               subtitle: "Content streamed in last 60 days"),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
+
+//------------------------------ Background Image For Students or Creators code Section--------------------------------
+
                       Row(
-                        children: [
+                        children: const [
                           InfoWidget(title: "50+", subtitle: "Creators"),
                           InfoWidget(
                               title: "110+", subtitle: "Program available"),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       BackgroundImageWidget(
@@ -291,13 +312,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Unlock Your learning potential with CipherSchools",
                         title: "Best Platform for the Students ",
                         btnText: "For Students",
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.school_outlined,
                           color: Colors.white,
                         ),
                         callback: () {},
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       BackgroundImageWidget(
@@ -306,12 +327,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Empowering students to open their minds to atmost knowledge",
                         title: "Be the mentor you never had ",
                         btnText: "For Creators",
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.perm_contact_calendar_outlined,
                           color: Colors.white,
                         ),
                         callback: () {
                           print("Hello");
+
+//------------------------------ For Creators Form code Section--------------------------------
 
                           //show dialog code start here
                           showDialog(
@@ -320,7 +343,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               return AlertDialog(
                                 title: Container(
                                   height: 60,
-                                  padding: EdgeInsets.symmetric(horizontal: 15),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 15),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -329,7 +353,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Text(
+                                            const Text(
                                               "Creators Access",
                                               style: TextStyle(
                                                   fontSize: 14,
@@ -342,15 +366,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
-                                                  child: Text(
+                                                  style: TextButton.styleFrom(
+                                                      backgroundColor:
+                                                          Colors.black),
+                                                  child: const Text(
                                                     "Cancel",
                                                     style: TextStyle(
                                                         fontSize: 12,
                                                         color: Colors.white),
                                                   ),
-                                                  style: TextButton.styleFrom(
-                                                      backgroundColor:
-                                                          Colors.black),
                                                 )),
                                           ],
                                         ),
@@ -390,7 +414,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                         Container(
                                           height: 100,
-                                          margin: EdgeInsets.all(9),
+                                          margin: const EdgeInsets.all(9),
                                           decoration: BoxDecoration(
                                             color: Colors.grey.withOpacity(0.2),
                                             borderRadius:
@@ -402,7 +426,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               maxLines: 5,
                                               controller: timeController,
                                               cursorColor: Colors.black54,
-                                              decoration: InputDecoration(
+                                              decoration: const InputDecoration(
                                                 hintStyle:
                                                     TextStyle(fontSize: 13),
                                                 hintText:
@@ -429,15 +453,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     onPressed: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    child: Text(
+                                                    style: TextButton.styleFrom(
+                                                        backgroundColor:
+                                                            Colors.orange),
+                                                    child: const Text(
                                                       "Submit",
                                                       style: TextStyle(
                                                           fontSize: 14,
                                                           color: Colors.white),
                                                     ),
-                                                    style: TextButton.styleFrom(
-                                                        backgroundColor:
-                                                            Colors.orange),
                                                   )),
                                             ],
                                           ),
@@ -453,7 +477,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
 
@@ -469,14 +493,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: MediaQuery.of(context).size.height * 0.26,
                               child: Column(
-                                children: [
+                                children: const [
                                   SizedBox(
                                     height: 15,
                                   ),
                                   Align(
                                     alignment: Alignment.centerLeft,
                                     child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: EdgeInsets.all(8.0),
                                       child: Text(
                                         "Students LIVE Feedback",
                                         style: TextStyle(
@@ -493,7 +517,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Align(
                                     alignment: Alignment.centerLeft,
                                     child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: EdgeInsets.all(8.0),
                                       child: Text(
                                         "We love to read them",
                                         style: TextStyle(
@@ -505,7 +529,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: EdgeInsets.all(8.0),
                                     child: Text(
                                       "feedback is a significant component of our success because it inspires us to get better and meet the expectations of our students.",
                                       style: TextStyle(
@@ -519,20 +543,21 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Container(
                               height: MediaQuery.of(context).size.height * 0.44,
-                              padding: EdgeInsets.all(8),
-                              child: FeedbackWidget(),
+                              padding: const EdgeInsets.all(8),
+                              child: const FeedbackWidget(),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 22,
                       ),
- //--------------------------------------Creators From Section Code with Slider----------------------------------------
+
+                      //--------------------------------------Creators From Section Code with Slider----------------------------------------
 
                       Container(
-                        margin: EdgeInsets.only(bottom: 12, left: 7),
-                        child: Align(
+                        margin: const EdgeInsets.only(bottom: 12, left: 7),
+                        child: const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               'Creators from',
@@ -543,17 +568,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             )),
                       ),
 
-                      CourseSlider(imglist:cslider_Img,height: 90,),
+                      CourseSlider(
+                        imglist: cslider_Img,
+                        height: 90,
+                      ),
 
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
 
 //--------------------------------------Bests are here Section Code r----------------------------------------
 
                       Container(
-                        margin: EdgeInsets.only(bottom: 12, left: 7),
-                        child: Text(
+                        margin: const EdgeInsets.only(bottom: 12, left: 7),
+                        child: const Text(
                           'Bests are here',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -561,7 +589,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.black),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 17,
                       ),
                       CarouselSlider.builder(
@@ -574,9 +602,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 60,
                             pageSnapping: false,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
+
+//------------------------------ Courses Display  code Section--------------------------------
+
                       Column(
                         children: [
                           Row(
@@ -592,7 +623,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   teacher_name: "Harshit Vashisth",
                                   teacher_type: "Instructors",
                                   techaer_callback: () {}),
-
                               DisplayCourseWidget(
                                   course_url: courses_Img[1],
                                   course_name: course_list[2],
@@ -606,8 +636,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   techaer_callback: () {}),
                             ],
                           ),
-                          SizedBox(height: 25,),
-
+                          const SizedBox(
+                            height: 25,
+                          ),
                           Row(
                             children: [
                               DisplayCourseWidget(
@@ -621,7 +652,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   teacher_name: "Shruti Codes",
                                   teacher_type: "Instructors",
                                   techaer_callback: () {}),
-
                               DisplayCourseWidget(
                                   course_url: courses_Img[3],
                                   course_name: course_list[2],
@@ -635,94 +665,183 @@ class _HomeScreenState extends State<HomeScreen> {
                                   techaer_callback: () {}),
                             ],
                           ),
-
                         ],
                       ),
-                      SizedBox(height: 30,),
-                      
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20.0,bottom: 30),
-                        child: Text("Our Expert Mentors",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 29),),
+                      const SizedBox(
+                        height: 30,
                       ),
 
-                      CourseSlider(imglist: mentorslider_img, height:170),
+//------------------------------ Our Expert Mentor with Slider code Section--------------------------------
 
-                      SizedBox(height: 40,),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 20.0, bottom: 30),
+                        child: Text(
+                          "Our Expert Mentors",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 29),
+                        ),
+                      ),
+
+                      CourseSlider(imglist: mentorslider_img, height: 170),
+
+                      const SizedBox(
+                        height: 40,
+                      ),
+
+//------------------------------ Join Discord code Section--------------------------------
 
                       Container(
-                        height: screen.height*0.8,
+                        height: screen.height * 0.8,
                         width: screen.width,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/Images/community.png'),fit: BoxFit.fitWidth,
+                            image: AssetImage('assets/Images/community.png'),
+                            fit: BoxFit.fitWidth,
                           ),
                         ),
-
                       ),
+
+//------------------------------ CipherSchools Intro code Section--------------------------------
 
                       Container(
-                        height: screen.height*0.3,
+                        height: screen.height * 0.3,
                         width: screen.width,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/Images/footer.png'),fit: BoxFit.fitWidth,
+                            image: AssetImage('assets/Images/footer.png'),
+                            fit: BoxFit.fitWidth,
                           ),
                         ),
-
                       ),
+
+                      //------------------------------ Popular Course and Company Info code Section--------------------------------
 
                       Row(
-                        children: [
-                          SizedBox(width: 15,),
-                          Text("Popular Courses",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          SizedBox(width: 28,),
-                          Text("Company Info",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                        children: const [
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Popular Courses",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 28,
+                          ),
+                          Text(
+                            "Company Info",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                       Column(
-                        children: [
-                          SizedBox(height: 20,),
-                          FooterInfo(popular_course:"Data Science", company_info:"Home"),
-                          FooterInfo(popular_course:"Programming", company_info:"Blog"),
-                          FooterInfo(popular_course:"Data Structure", company_info:"Why We?"),
-                          FooterInfo(popular_course:"Machine Learning", company_info:"Sitemap"),
-                          FooterInfo(popular_course:"Web Development", company_info:"Privacy Policy"),
-                          FooterInfo(popular_course:"Game Development", company_info:"Terms & Condition"),
+                        children: const [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          FooterInfo(
+                              popular_course: "Data Science",
+                              company_info: "Home"),
+                          FooterInfo(
+                              popular_course: "Programming",
+                              company_info: "Blog"),
+                          FooterInfo(
+                              popular_course: "Data Structure",
+                              company_info: "Why We?"),
+                          FooterInfo(
+                              popular_course: "Machine Learning",
+                              company_info: "Sitemap"),
+                          FooterInfo(
+                              popular_course: "Web Development",
+                              company_info: "Privacy Policy"),
+                          FooterInfo(
+                              popular_course: "Game Development",
+                              company_info: "Terms & Condition"),
                         ],
                       ),
-                      SizedBox(height: 30,),
-                      
+                      const SizedBox(
+                        height: 30,
+                      ),
+
+//------------------------------ Last Social Media Button code Section--------------------------------
+
                       Column(
                         children: [
                           Container(
-                            height: screen.height*0.06,
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(242, 245, 250,1),
+                            height: screen.height * 0.06,
+                            decoration: const BoxDecoration(
+                              color: Color.fromRGBO(242, 245, 250, 1),
                               image: DecorationImage(
                                 image: AssetImage('assets/Images/social.png'),
                               ),
                             ),
                           ),
                           Container(
-                            color:  Color.fromRGBO(242, 245, 250,1),
+                            color: const Color.fromRGBO(242, 245, 250, 1),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                InkWell(child: Image.asset('assets/Images/discord.png',height: 30,width: 40,),onTap: (){
-
-                                },),
-                                InkWell(child: Image.asset('assets/Images/instagram.png',height: 30,width: 40,),onTap: (){},),
-                                InkWell(child: Image.asset('assets/Images/linkedin.png',height: 30,width: 40,),onTap: (){},),
-                                InkWell(child: Image.asset('assets/Images/github.png',height: 30,width: 40,),onTap: (){},),
-                                InkWell(child: Image.asset('assets/Images/facebook.png',height: 30,width: 40,),onTap: (){},),
-                                InkWell(child: Image.asset('assets/Images/twitter.png',height: 30,width: 40,),onTap: (){},),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/discord.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/instagram.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/linkedin.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/github.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/facebook.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
+                                InkWell(
+                                  child: Image.asset(
+                                    'assets/Images/twitter.png',
+                                    height: 30,
+                                    width: 40,
+                                  ),
+                                  onTap: () {},
+                                ),
                               ],
                             ),
                           ),
-
                         ],
                       ),
-                      Container(height: 40,color: Color.fromRGBO(242, 245, 250,1),)
+                      Container(
+                        height: 40,
+                        color: const Color.fromRGBO(242, 245, 250, 1),
+                      )
                     ],
                   )
                 ],
@@ -730,6 +849,8 @@ class _HomeScreenState extends State<HomeScreen> {
             )));
   }
 }
+
+//------------------------------  All Function related to Slider code Section--------------------------------
 
 Widget setImage(String img_url, int index) {
   return Container(
@@ -741,7 +862,7 @@ Widget setImage(String img_url, int index) {
           image: AssetImage(img_url),
           fit: BoxFit.fill,
         )),
-    margin: EdgeInsets.symmetric(horizontal: 4),
+    margin: const EdgeInsets.symmetric(horizontal: 4),
     //child: Image.asset(img_url,fit: BoxFit.fill,),
   );
 }
@@ -749,7 +870,7 @@ Widget setImage(String img_url, int index) {
 Widget setTextImage(String text, int index) {
   return Container(
     width: 270,
-    margin: EdgeInsets.symmetric(horizontal: 0),
+    margin: const EdgeInsets.symmetric(horizontal: 0),
     child: ElevatedButton(
       onPressed: () {},
       child: Text(

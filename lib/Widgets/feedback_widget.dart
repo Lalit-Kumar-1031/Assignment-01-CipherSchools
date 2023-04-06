@@ -9,101 +9,108 @@ class FeedbackWidget extends StatefulWidget {
 }
 
 class _FeedbackWidgetState extends State<FeedbackWidget> {
-  int currentAd=0;
+  int currentAd = 0;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onHorizontalDragEnd:(_){
-          if(currentAd==largeAds.length-1)
-          {
-            currentAd=-1;
-          }
-          setState(() {
-            currentAd++;
-          });
-        },
+      onHorizontalDragEnd: (_) {
+        if (currentAd == largeAds.length - 1) {
+          currentAd = -1;
+        }
+        setState(() {
+          currentAd++;
+        });
+      },
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height*0.35,
-              width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.35,
+            width: double.infinity,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image:AssetImage(largeAds[currentAd],),fit: BoxFit.fill,
-              ),
-              borderRadius: BorderRadius.circular(15)
-            ),
+                image: DecorationImage(
+                  image: AssetImage(
+                    largeAds[currentAd],
+                  ),
+                  fit: BoxFit.fill,
+                ),
+                borderRadius: BorderRadius.circular(15)),
           ),
-          SizedBox(height: 30,),
+          const SizedBox(
+            height: 30,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                onTap: (){
+                onTap: () {
                   setState(() {
-                    currentAd=0;
-                  });
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: currentAd==0?Colors.orange:Colors.black,
-                  ),
-                  height: 5,width: 50),
-              ),
-              InkWell(
-                onTap: (){
-                  setState(() {
-                    currentAd=1;
+                    currentAd = 0;
                   });
                 },
                 child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: currentAd==1?Colors.orange:Colors.black,
+                      color: currentAd == 0 ? Colors.orange : Colors.black,
                     ),
-                    height: 5,width: 50),
+                    height: 5,
+                    width: 50),
               ),
               InkWell(
-                onTap: (){
+                onTap: () {
                   setState(() {
-                    currentAd=2;
+                    currentAd = 1;
                   });
                 },
                 child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: currentAd==2?Colors.orange:Colors.black,
+                      color: currentAd == 1 ? Colors.orange : Colors.black,
                     ),
-                    height: 5,width: 50),
+                    height: 5,
+                    width: 50),
               ),
               InkWell(
-                onTap: (){
+                onTap: () {
                   setState(() {
-                    currentAd=3;
+                    currentAd = 2;
                   });
                 },
                 child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: currentAd==3?Colors.orange:Colors.black,
+                      color: currentAd == 2 ? Colors.orange : Colors.black,
                     ),
-                    height: 5,width: 50),
+                    height: 5,
+                    width: 50),
               ),
               InkWell(
-                onTap: (){
+                onTap: () {
                   setState(() {
-                    currentAd=4;
+                    currentAd = 3;
                   });
                 },
                 child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: currentAd==4?Colors.orange:Colors.black,
+                      color: currentAd == 3 ? Colors.orange : Colors.black,
                     ),
-                    height: 5,width: 50),
+                    height: 5,
+                    width: 50),
               ),
-
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    currentAd = 4;
+                  });
+                },
+                child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: currentAd == 4 ? Colors.orange : Colors.black,
+                    ),
+                    height: 5,
+                    width: 50),
+              ),
             ],
           )
         ],

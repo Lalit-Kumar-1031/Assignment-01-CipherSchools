@@ -33,12 +33,12 @@ class DisplayCourseWidget extends StatefulWidget {
 class _DisplayCourseWidgetState extends State<DisplayCourseWidget> {
   @override
   Widget build(BuildContext context) {
-    Size screensize=MediaQuery.of(context).size;
+    Size screensize = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(left: 5,right: 2),
+      padding: const EdgeInsets.only(left: 5, right: 2),
       child: Container(
-        height: screensize.height*0.4,
-        width: screensize.width*0.476,
+        height: screensize.height * 0.4,
+        width: screensize.width * 0.476,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.grey.shade200,
@@ -48,32 +48,34 @@ class _DisplayCourseWidgetState extends State<DisplayCourseWidget> {
             InkWell(
               onTap: widget.course_callback,
               child: Container(
-                height: screensize.height*0.14,
-                width: screensize.width*0.475,
+                height: screensize.height * 0.14,
+                width: screensize.width * 0.475,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  image: DecorationImage(
-                    image: AssetImage(widget.course_url,),
-                    fit: BoxFit.fill,
-                  )
-                ),
+                    borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        widget.course_url,
+                      ),
+                      fit: BoxFit.fill,
+                    )),
               ),
             ),
-
             Align(
               alignment: Alignment.centerLeft,
               child: InkWell(
                 onTap: widget.course_callback,
                 child: Container(
                   height: 35,
-                  margin: EdgeInsets.only(top: 9),
-                  width: screensize.width*0.35,
-                  padding: EdgeInsets.all(11),
+                  margin: const EdgeInsets.only(top: 9),
+                  width: screensize.width * 0.35,
+                  padding: const EdgeInsets.all(11),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                    color: Colors.orange.withOpacity(0.1)
+                      color: Colors.orange.withOpacity(0.1)),
+                  child: Text(
+                    widget.course_name,
+                    style: const TextStyle(color: Colors.orange, fontSize: 12),
                   ),
-                  child: Text(widget.course_name,style: TextStyle(color: Colors.orange,fontSize: 12),),
                 ),
               ),
             ),
@@ -81,34 +83,43 @@ class _DisplayCourseWidgetState extends State<DisplayCourseWidget> {
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: const EdgeInsets.all(6.0),
-                child: Text(widget.course_title,style: TextStyle(fontSize:14,fontWeight: FontWeight.w600),overflow: TextOverflow.ellipsis,),
+                child: Text(
+                  widget.course_title,
+                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 6.0,top: 4,bottom: 1),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                  child: Text("No. of videos : ${widget.no_of_videos}",style: TextStyle(fontSize:12))),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 6.0,top: 6,bottom: 1),
+              padding: const EdgeInsets.only(left: 6.0, top: 4, bottom: 1),
               child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Course Time : ${widget.course_time}",style: TextStyle(fontSize:12))),
+                  child: Text("No. of videos : ${widget.no_of_videos}",
+                      style: const TextStyle(fontSize: 12))),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 6.0, top: 6, bottom: 1),
+              child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text("Course Time : ${widget.course_time}",
+                      style: const TextStyle(fontSize: 12))),
             ),
             ListTile(
-              contentPadding: EdgeInsets.only(left: 8,),
-              horizontalTitleGap:1,
-              title: Text(widget.teacher_name,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600),overflow: TextOverflow.ellipsis,),
-              subtitle: Text(widget.teacher_type),
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(widget.teachers_img),
-                radius: 13,
-              ),
-              onTap:widget.techaer_callback
-            ),
-
+                contentPadding: const EdgeInsets.only(
+                  left: 8,
+                ),
+                horizontalTitleGap: 1,
+                title: Text(
+                  widget.teacher_name,
+                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                  overflow: TextOverflow.ellipsis,
+                ),
+                subtitle: Text(widget.teacher_type),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(widget.teachers_img),
+                  radius: 13,
+                ),
+                onTap: widget.techaer_callback),
           ],
         ),
       ),

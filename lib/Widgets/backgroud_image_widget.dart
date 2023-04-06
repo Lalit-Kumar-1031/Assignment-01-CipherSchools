@@ -14,7 +14,8 @@ class BackgroundImageWidget extends StatelessWidget {
       required this.subtitle,
       required this.title,
       required this.btnText,
-      required this.icon,required this.callback})
+      required this.icon,
+      required this.callback})
       : super(key: key);
 
   @override
@@ -44,13 +45,28 @@ class BackgroundImageWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 35,),
-                  Text(subtitle,style: TextStyle(color: Colors.white,fontSize: 16),),
-                  SizedBox(height: 10,),
-                  Text(title,style: TextStyle(color: Colors.white,fontSize: 23,fontWeight: FontWeight.bold),),
-                  SizedBox(height: 45,),
-                  CustomButtonbkImg(text: btnText, icon: icon,callback:callback),
-
+                  const SizedBox(
+                    height: 35,
+                  ),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 45,
+                  ),
+                  CustomButtonbkImg(
+                      text: btnText, icon: icon, callback: callback),
                 ],
               ),
             )),

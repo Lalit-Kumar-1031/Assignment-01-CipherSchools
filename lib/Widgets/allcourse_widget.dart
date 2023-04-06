@@ -27,7 +27,6 @@ class _AllCourseWidgetState extends State<AllCourseWidget> {
                 teacher_name: "Harshit Vashisth",
                 teacher_type: "Instructors",
                 techaer_callback: () {}),
-
             DisplayCourseWidget(
                 course_url: courses_Img[1],
                 course_name: course_list[2],
@@ -41,8 +40,9 @@ class _AllCourseWidgetState extends State<AllCourseWidget> {
                 techaer_callback: () {}),
           ],
         ),
-        SizedBox(height: 25,),
-
+        const SizedBox(
+          height: 25,
+        ),
         Row(
           children: [
             DisplayCourseWidget(
@@ -56,7 +56,6 @@ class _AllCourseWidgetState extends State<AllCourseWidget> {
                 teacher_name: "Shruti Codes",
                 teacher_type: "Instructors",
                 techaer_callback: () {}),
-
             DisplayCourseWidget(
                 course_url: courses_Img[3],
                 course_name: course_list[2],
@@ -68,24 +67,26 @@ class _AllCourseWidgetState extends State<AllCourseWidget> {
                 teacher_name: "Shruti codes",
                 teacher_type: "Instructors",
                 techaer_callback: () {}),
-
           ],
         ),
-        SizedBox(height: 25,),
-        Row(children: [
-          DisplayCourseWidget(
-              course_url: courses_Img[1],
-              course_name: course_list[2],
-              course_title: "Java Script Tutorials",
-              no_of_videos: "36",
-              course_time: "5.2 hours",
-              course_callback: () {},
-              teachers_img: "assets/Images/mentor3.jpg",
-              teacher_name: "Shruti codes",
-              teacher_type: "Instructors",
-              techaer_callback: () {}),
-        ],)
-
+        const SizedBox(
+          height: 25,
+        ),
+        Row(
+          children: [
+            DisplayCourseWidget(
+                course_url: courses_Img[1],
+                course_name: course_list[2],
+                course_title: "Java Script Tutorials",
+                no_of_videos: "36",
+                course_time: "5.2 hours",
+                course_callback: () {},
+                teachers_img: "assets/Images/mentor3.jpg",
+                teacher_name: "Shruti codes",
+                teacher_type: "Instructors",
+                techaer_callback: () {}),
+          ],
+        )
       ],
     );
   }

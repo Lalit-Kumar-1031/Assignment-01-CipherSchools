@@ -45,13 +45,14 @@ class _LayoutScreenState extends State<LayoutScreen> {
           body: PageView(
               physics: const NeverScrollableScrollPhysics(),
               allowImplicitScrolling: false,
-              controller: pageController, children: pages),
+              controller: pageController,
+              children: pages),
           bottomNavigationBar: Container(
             height: 55,
-            margin: EdgeInsets.only(bottom: 10,left: 10,right: 10),
+            margin: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
             decoration: BoxDecoration(
               color: Colors.white,
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     color: Colors.black26,
                     blurRadius: 6,
@@ -61,9 +62,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
               borderRadius: BorderRadius.circular(25),
             ),
             child: TabBar(
-
               //physics: NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.only(top: 1,bottom: 2),
+              padding: const EdgeInsets.only(top: 1, bottom: 2),
               indicatorSize: TabBarIndicatorSize.label,
               indicatorColor: Colors.white,
               onTap: changepage,
@@ -74,26 +74,41 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     Icons.home_outlined,
                     color: selectedTab == 0 ? Colors.orange : Colors.black,
                   ),
-                  iconMargin: EdgeInsets.only(bottom: 3),
-                  child: Text("Home",style: TextStyle(color:selectedTab==0 ?Colors.orange :Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+                  iconMargin: const EdgeInsets.only(bottom: 3),
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                        color: selectedTab == 0 ? Colors.orange : Colors.black,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ),
                 Tab(
                   icon: Icon(
                     Icons.library_books,
                     color: selectedTab == 1 ? Colors.orange : Colors.black,
                   ),
-                  iconMargin: EdgeInsets.only(bottom: 3),
-                  child: Text("Courses",style: TextStyle(color: selectedTab==1?Colors.orange :Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+                  iconMargin: const EdgeInsets.only(bottom: 3),
+                  child: Text(
+                    "Courses",
+                    style: TextStyle(
+                        color: selectedTab == 1 ? Colors.orange : Colors.black,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ),
                 Tab(
                   icon: Icon(
                     Icons.trending_up,
                     color: selectedTab == 2 ? Colors.orange : Colors.black,
                   ),
-                  iconMargin: EdgeInsets.only(bottom: 3),
+                  iconMargin: const EdgeInsets.only(bottom: 3),
                   child: Text(
                     "Trending",
-                    style: TextStyle(color:selectedTab==2?Colors.orange :Colors.black,fontSize: 10,fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: selectedTab == 2 ? Colors.orange : Colors.black,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
                 Tab(
@@ -101,8 +116,14 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     Icons.person,
                     color: selectedTab == 3 ? Colors.orange : Colors.black,
                   ),
-                  iconMargin: EdgeInsets.only(bottom: 3),
-                  child: Text("My Profile",style: TextStyle(color:selectedTab==3?Colors.orange :Colors.black,fontSize: 10,fontWeight: FontWeight.w500),),
+                  iconMargin: const EdgeInsets.only(bottom: 3),
+                  child: Text(
+                    "My Profile",
+                    style: TextStyle(
+                        color: selectedTab == 3 ? Colors.orange : Colors.black,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ),
               ],
             ),

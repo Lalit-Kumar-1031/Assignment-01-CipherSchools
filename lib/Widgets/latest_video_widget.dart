@@ -28,7 +28,6 @@ class _LatestVideoWidgetState extends State<LatestVideoWidget> {
               teacher_name: "Shruti Codes",
               teacher_type: "Instructors",
               techaer_callback: () {}),
-
           DisplayCourseWidget(
               course_url: courses_Img[3],
               course_name: course_list[2],
@@ -53,7 +52,6 @@ class _LatestVideoWidgetState extends State<LatestVideoWidget> {
                   teacher_name: "Harshit Vashisth",
                   teacher_type: "Instructors",
                   techaer_callback: () {}),
-
               DisplayCourseWidget(
                   course_url: courses_Img[1],
                   course_name: course_list[2],
