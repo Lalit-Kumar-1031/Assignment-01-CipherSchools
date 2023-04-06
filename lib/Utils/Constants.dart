@@ -61,6 +61,16 @@ const List<String> course_category = [
   "Latest",
 ];
 
+const List<String> features = [
+  "Home",
+  "App Development",
+  "Creators Access",
+  "Live Review",
+  "Community",
+  "Explore Courses",
+  "SignIn",
+];
+
 
 
 

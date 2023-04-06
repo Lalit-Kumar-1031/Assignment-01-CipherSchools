@@ -1,3 +1,5 @@
+import 'package:cipher_schools/Utils/Constants.dart';
+import 'package:cipher_schools/Widgets/dropdown_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatefulWidget with PreferredSizeWidget {
@@ -51,7 +53,21 @@ class _HomeAppBarState extends State<HomeAppBar> {
             setState(() {
 
             });
-          }, icon:tapped?Icon(Icons.format_align_right):Icon(Icons.cut)),
+
+          }, icon:PopupMenuButton(
+            icon:tapped?Icon(Icons.format_align_right):Icon(Icons.cut) ,
+            itemBuilder: (context) => [
+              PopupMenuItem(child: Text(features[0]),onTap: (){},),
+              PopupMenuItem(child: Text(features[1]),onTap: (){},),
+              PopupMenuItem(child: Text(features[2]),onTap: (){},),
+              PopupMenuItem(child: Text(features[3]),onTap: (){},),
+              PopupMenuItem(child: Text(features[4]),onTap: (){},),
+              PopupMenuItem(child: Text(features[5]),onTap: (){},),
+              PopupMenuItem(child: Text(features[6]),onTap: (){},),
+
+
+            ],
+          )),
         ],
       ),
     );

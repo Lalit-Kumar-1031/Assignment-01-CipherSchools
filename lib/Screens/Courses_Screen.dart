@@ -1,8 +1,9 @@
 import 'package:cipher_schools/Utils/Constants.dart';
-import 'package:cipher_schools/Widgets/Home_AppBar.dart';
+import 'package:cipher_schools/Widgets/Courses_AppBar.dart';
 import 'package:cipher_schools/Widgets/allcourse_widget.dart';
 import 'package:cipher_schools/Widgets/course_slider.dart';
 import 'package:cipher_schools/Widgets/display_course_widget.dart';
+import 'package:cipher_schools/Widgets/dropdown_widget.dart';
 import 'package:cipher_schools/Widgets/latest_video_widget.dart';
 import 'package:cipher_schools/Widgets/popular_category_widget.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: HomeAppBar(),
+        appBar: CoursesAppBar(),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -36,22 +37,22 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     padding: EdgeInsets.only(left: 16),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(10)
                     ),
                     width: 100,
                     child: DropdownButtonFormField<String>(
-                      value: selected,
+                        value: selected,
                         hint: Text("Papular"),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                         ),
                         items:course_category.map((e){
-                      return DropdownMenuItem<String>(child: Text(e),
-                      value: e,);
-                    }).toList(), onChanged:(val){
-                        setState(() {
-                          selected=val;
-                        });
+                          return DropdownMenuItem<String>(child: Text(e),
+                            value: e,);
+                        }).toList(), onChanged:(val){
+                      setState(() {
+                        selected=val;
+                      });
                     }),
                   )
                 ],
@@ -136,7 +137,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               ),alignment: Alignment.centerLeft,),
               SizedBox(height: 20,),
               AllCourseWidget(),
-
+              SizedBox(height: 40,),
 
             ],
           ),
