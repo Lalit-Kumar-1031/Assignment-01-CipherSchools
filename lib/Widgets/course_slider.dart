@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CourseSlider extends StatefulWidget {
   List <String> imglist;
   final double height;
-   CourseSlider({Key? key,required this.imglist,required this.height}) : super(key: key);
+  CourseSlider({Key? key,required this.imglist,required this.height}) : super(key: key);
 
   @override
   State<CourseSlider> createState() => _CourseSliderState();
@@ -18,20 +18,21 @@ class _CourseSliderState extends State<CourseSlider> {
         itemCount: widget.imglist.length,
         itemBuilder: (context, index, realIndex) {
           final c_img = widget.imglist[index];
-          return setCImage(c_img, index);
+          return setSImage(c_img, index);
         },
         options: CarouselOptions(
           height: widget.height,
           autoPlay: true,
+          viewportFraction: 1,
           autoPlayInterval: Duration(seconds: 5),
-          autoPlayAnimationDuration: Duration(seconds: 5),
+          //autoPlayAnimationDuration: Duration(seconds: 5),
           //viewportFraction: 1,
           //enlargeCenterPage: true,
-          // enlargeStrategy: CenterPageEnlargeStrategy.height,
+          //enlargeStrategy: CenterPageEnlargeStrategy.height,
         ));
   }
 }
-Widget setCImage(String c_img, int index) {
+Widget setSImage(String c_img, int index) {
   return Container(
     width: double.infinity,
     decoration: BoxDecoration(

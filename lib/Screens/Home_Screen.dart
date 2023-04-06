@@ -543,7 +543,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             )),
                       ),
 
-                      CreatorsFromSlider(imglist:cslider_Img,height: 90,),
+                      CourseSlider(imglist:cslider_Img,height: 90,),
 
                       SizedBox(
                         height: 30,
@@ -645,7 +645,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text("Our Expert Mentors",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 29),),
                       ),
 
-                      CreatorsFromSlider(imglist: mentorslider_img, height:170),
+                      CourseSlider(imglist: mentorslider_img, height:170),
 
                       SizedBox(height: 40,),
 
@@ -691,8 +691,38 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(height: 30,),
+                      
+                      Column(
+                        children: [
+                          Container(
+                            height: screen.height*0.06,
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(242, 245, 250,1),
+                              image: DecorationImage(
+                                image: AssetImage('assets/Images/social.png'),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            color:  Color.fromRGBO(242, 245, 250,1),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                InkWell(child: Image.asset('assets/Images/discord.png',height: 30,width: 40,),onTap: (){
 
+                                },),
+                                InkWell(child: Image.asset('assets/Images/instagram.png',height: 30,width: 40,),onTap: (){},),
+                                InkWell(child: Image.asset('assets/Images/linkedin.png',height: 30,width: 40,),onTap: (){},),
+                                InkWell(child: Image.asset('assets/Images/github.png',height: 30,width: 40,),onTap: (){},),
+                                InkWell(child: Image.asset('assets/Images/facebook.png',height: 30,width: 40,),onTap: (){},),
+                                InkWell(child: Image.asset('assets/Images/twitter.png',height: 30,width: 40,),onTap: (){},),
+                              ],
+                            ),
+                          ),
 
+                        ],
+                      ),
+                      Container(height: 40,color: Color.fromRGBO(242, 245, 250,1),)
                     ],
                   )
                 ],

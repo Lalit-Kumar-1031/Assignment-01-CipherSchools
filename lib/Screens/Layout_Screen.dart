@@ -42,7 +42,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
       length: 4,
       child: SafeArea(
         child: Scaffold(
-          body: PageView(controller: pageController, children: pages),
+          body: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              allowImplicitScrolling: false,
+              controller: pageController, children: pages),
           bottomNavigationBar: Container(
             height: 55,
             margin: EdgeInsets.only(bottom: 10,left: 10,right: 10),
@@ -59,11 +62,12 @@ class _LayoutScreenState extends State<LayoutScreen> {
             ),
             child: TabBar(
 
-              physics: NeverScrollableScrollPhysics(),
+              //physics: NeverScrollableScrollPhysics(),
               padding: EdgeInsets.only(top: 1,bottom: 2),
               indicatorSize: TabBarIndicatorSize.label,
               indicatorColor: Colors.white,
               onTap: changepage,
+              //controller: pageController,
               tabs: [
                 Tab(
                   icon: Icon(

@@ -49,5 +49,18 @@ const List<String> mentorslider_img = [
   "assets/Images/mslider5.png",
 ];
 
+const List<String> courses_slider = [
+  "assets/Images/course1.png",
+  "assets/Images/course2.png",
+  "assets/Images/course3.png",
+  "assets/Images/course4.png",
+];
+
+const List<String> course_category = [
+  "Popular",
+  "Latest",
+];
+
+
 
 
